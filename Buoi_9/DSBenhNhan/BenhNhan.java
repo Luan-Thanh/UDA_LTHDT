@@ -53,9 +53,9 @@ public class BenhNhan implements IBenhNhan {
     public void nhapBN() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap ma: ");
-        ma = sc.nextLine();
+        ma = sc.next();
         System.out.print("Nhap ho ten: ");
-        hoTen = sc.nextLine();
+        hoTen = sc.next();
         System.out.print("Nhap tien thuoc: ");
         tienThuoc = sc.nextDouble();
     }

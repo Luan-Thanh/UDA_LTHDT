@@ -22,13 +22,16 @@ public class BSToanTG extends BacSi {
     }
 
     public void nhapBSToanTG() {
+        nhapBS();
         System.out.print("Nhap luong kham: ");
-        System.out.print("Nhap luong xet");
+        luongKham = sc.nextDouble();
+        System.out.print("Nhap luong xet nghiem: ");
+        luongXetNghiem = sc.nextDouble();
     }
 
     @Override
     public String toString() {
         return "BSToanTG[ Ma: " + ma + " - Ho ten: " + hoTen + " - Muc luong: " + mucLuong + " - Luong kham: "
-                + luongKham + " - Luong xet nghiem: " + luongXetNghiem + " - Luong hang thang: " + luongXetNghiem;
+                + luongKham + " - Luong xet nghiem: " + luongXetNghiem + " - Luong hang thang: " + luongHangThang();
     }
 }

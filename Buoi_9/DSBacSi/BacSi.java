@@ -44,9 +44,9 @@ public class BacSi implements IBacSi {
 
     public void nhapBS() {
         System.out.print("Nhap ma: ");
-        ma = sc.nextLine();
+        ma = sc.next();
         System.out.print("Nhap ho ten: ");
-        hoTen = sc.nextLine();
+        hoTen = sc.next();
         System.out.print("Nhap muc luong: ");
         mucLuong = sc.nextDouble();
     }

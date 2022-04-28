@@ -5,34 +5,34 @@ import java.util.Scanner;
 
 public class DSBenhNhan {
 
-    public static Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
     // Lớp cha có thể nhận dữ liệu từ các lớp con nên dùng BenhNhan
     static ArrayList<BenhNhan> dsBenhNhan = new ArrayList<BenhNhan>();
 
     // Thêm ngoai trú
-    public static void themBNNgoaiTru() {
+    static void themBNNgoaiTru() {
         BNNgoaiTru ngts = new BNNgoaiTru();
         ngts.nhapBNNgoaiTru();
         dsBenhNhan.add(ngts);
     }
 
     // Thêm nội trú
-    public static void themBNNoiTru() {
+    static void themBNNoiTru() {
         BNNoiTru nts = new BNNoiTru();
         nts.nhapBNNoiTru();
         dsBenhNhan.add(nts);
     }
 
     // In danh sách
-    public static void inDanhSach() {
+    static void inDanhSach() {
         for (BenhNhan benhNhan : dsBenhNhan) {
             System.out.println(benhNhan);
         }
     }
 
     // Tim bệnh nhân nội trú 3K
-    public static void timBNNoiTru3K() {
+    static void timBNNoiTru3K() {
         for (BenhNhan benhNhan : dsBenhNhan) {
             if (benhNhan instanceof BNNoiTru) // KT benhNhan có thuộc BNNoiTru không
             {
@@ -43,9 +43,9 @@ public class DSBenhNhan {
     }
 
     // Tim theo ma
-    public static void timTheoMa() {
+    static void timTheoMa() {
         System.out.print("Nhap ma can tim: ");
-        String n = sc.nextLine();
+        String n = sc.next();
 
         for (BenhNhan benhNhan : dsBenhNhan) {
             if (benhNhan.ma.equals(n))
@@ -53,7 +53,7 @@ public class DSBenhNhan {
         }
     }
 
-    public static int inMenu() {
+    static int inMenu() {
         int luaChon = 0;
 
         System.out.println("======================================");
